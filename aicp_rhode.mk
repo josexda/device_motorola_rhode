@@ -10,11 +10,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device
 $(call inherit-product, device/motorola/rhode/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Aicp stuff.
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="josexda (José Gustavo 🌽)"
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_rhode
+PRODUCT_NAME := aicp_rhode
 PRODUCT_DEVICE := rhode
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g52
